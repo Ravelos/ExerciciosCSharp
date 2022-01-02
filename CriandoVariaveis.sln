@@ -1,25 +1,44 @@
-﻿
-Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
-VisualStudioVersion = 17.0.31919.166
-MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CriandoVariaveis", "CriandoVariaveis\CriandoVariaveis.csproj", "{C7FE7D08-7C5A-4B61-8805-8DAD22A0BDF8}"
-EndProject
-Global
-	GlobalSection(SolutionConfigurationPlatforms) = preSolution
-		Debug|Any CPU = Debug|Any CPU
-		Release|Any CPU = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{C7FE7D08-7C5A-4B61-8805-8DAD22A0BDF8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C7FE7D08-7C5A-4B61-8805-8DAD22A0BDF8}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C7FE7D08-7C5A-4B61-8805-8DAD22A0BDF8}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C7FE7D08-7C5A-4B61-8805-8DAD22A0BDF8}.Release|Any CPU.Build.0 = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {79FAF81B-EC52-465C-B431-B030900CD7A6}
-	EndGlobalSection
-EndGlobal
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace CriandoVariaveis
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Estaos executando o projeto 2 - Criando Variaveis");
+
+            int idade;
+
+            idade = 32;
+
+            Console.WriteLine(idade);
+
+            idade = 10;
+
+            Console.WriteLine(idade);
+
+            idade = (10+ 5) *2 ;
+
+
+            Console.WriteLine(idade);
+
+            idade = 10 + 5 * 2;
+
+            Console.WriteLine(idade);
+
+            idade = (10 - 5) * 2;
+
+            Console.WriteLine("Sua idade é " + idade);
+
+
+            Console.WriteLine("Execução terminada - Tecle Enter para sair...");
+
+            Console.ReadLine();
+        }
+    }
+}
