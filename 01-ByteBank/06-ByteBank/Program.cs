@@ -13,9 +13,19 @@ namespace _06_ByteBank
 
             ContaCorrente conta = new ContaCorrente();
 
-            conta.DefinirSaldo(-10);
+            Cliente cliente = new Cliente();
 
-            Console.WriteLine(conta.ObterSaldo());
+            cliente.nome = "Oswaldo";
+            cliente.cpf = "789.654.789-32";
+            cliente.profissao = "Desenvolvedor";
+
+
+            conta.Saldo= -10;
+            conta.Titular = cliente;
+
+            Console.WriteLine(conta.Titular.nome);
+            Console.WriteLine(conta.Saldo);
+            
 
             Console.ReadLine();
 
