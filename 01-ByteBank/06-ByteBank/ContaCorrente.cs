@@ -7,6 +7,7 @@ namespace _06_ByteBank
     {
         private Cliente _titular;
 
+        // Colocando o get e o set
         public Cliente Titular { get; set; }    
 
 
