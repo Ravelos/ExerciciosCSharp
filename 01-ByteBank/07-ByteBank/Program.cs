@@ -10,13 +10,14 @@ namespace _07_ByteBank
     {
         static void Main(string[] args)
         {
-            ContaCorrente conta = new ContaCorrente();
+            ContaCorrente conta = new ContaCorrente(987, 987654234);
 
-            conta.DefinirSaldo(-10);
+                   
 
-            Console.WriteLine(conta.ObterSaldo());
+            Console.WriteLine(conta.Agencia);
+            Console.WriteLine(conta.Numero);
 
-            Console.ReadLine(); 
+            Console.ReadLine();
         }
     }
 }

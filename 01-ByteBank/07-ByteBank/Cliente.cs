@@ -8,10 +8,24 @@ namespace _07_ByteBank
 {
     public class Cliente
     {
+        // melhorando o código com get e set para as propiedades com prop
         private string _cpf;
+        public string Nome { get; set; }
+        public string CPF
+        {
+            get
+            {
+                return _cpf;
+            }
+            set
+            {
+                //Criar logica aqui
 
-        public string nome { get; set; }    
-        public string CPF;
-        public string profissao;
+                _cpf = value;
+            }
+        }
+
+        public string  Profissao { get; set; }
+
     }
 }

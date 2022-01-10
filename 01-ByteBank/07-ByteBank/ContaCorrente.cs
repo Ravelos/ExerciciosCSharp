@@ -1,44 +1,70 @@
-﻿// using _05_ByteBank;
+﻿
 
 
 namespace _07_ByteBank 
 {
     public class ContaCorrente
     {
-        public Cliente titular;
-        public int agencia;
-        public int numero;
-        // O saldo será private para alterar sua visibilidade
-        private double saldo = 100;
-        
-        // Método para mostrar o saldo
-        public void DefinirSaldo(double saldo)
-        {
-            if(saldo < 0)
-            {
+        private Cliente _titular;
 
-            }
-            else
+        // Colocando o get e o set
+        public Cliente Titular { get; set; }
+
+        private int _agencia;
+        public int Agencia 
+        { 
+            get 
+            { 
+                return _agencia;
+            } 
+            set
+            { 
+                if (value <= 0)
+                { 
+                    return; 
+                }
+                _agencia = value;
+            } 
+        }
+        public int Numero { get; set; }
+
+        private double _saldo = 100;
+        // Atualizando o nome do campo saldo com underscore para mostrar que é um campo privado
+
+        public double Saldo
+        {
+            get
             {
-                this.saldo = saldo;
+                return _saldo;
+            }
+
+            set
+            {
+                if (value < 0)
+                {
+                    return;
+                }
+                _saldo = value;
             }
         }
-        // Consultar saldo
+        
+        // Criando o construtor da ContaCorrente
 
-        public double ObterSaldo()
+        public ContaCorrente(int agencia, int numero)
         {
-            return saldo;
+            Agencia = agencia;
+            Numero = numero;    
         }
 
         //Criamos metodos sacar depositar transferir
         public bool Sacar(double valor)
         {
-            if (saldo < valor)
+            if (_saldo < valor)
             {
                 return false;
             }
 
-            saldo -= valor;
+            _saldo -= valor;
             return true;
 
         }
@@ -46,17 +72,17 @@ namespace _07_ByteBank
         // As clases VOID não retornam nehum valor
         public void Depositar(double valor)
         {
-            saldo += valor;
+            _saldo += valor;
         }
 
         public bool Transferir(double valor, ContaCorrente contaDestino)
         {
-            if (saldo < valor)
+            if (_saldo < valor)
             {
                 return false;
             }
 
-            saldo -= valor;
+            _saldo -= valor;
             contaDestino.Depositar(valor);
             return true;
 
