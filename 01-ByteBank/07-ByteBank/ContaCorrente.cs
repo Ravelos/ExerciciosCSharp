@@ -10,6 +10,11 @@ namespace _07_ByteBank
         // Colocando o get e o set
         public Cliente Titular { get; set; }
 
+        // Colocando set private para evitar que seja modificado
+        public static int TotalDeContasCriadas { get; private set; }
+
+        
+
         private int _agencia;
         public int Agencia 
         { 
@@ -53,7 +58,9 @@ namespace _07_ByteBank
         public ContaCorrente(int agencia, int numero)
         {
             Agencia = agencia;
-            Numero = numero;    
+            Numero = numero;
+
+            TotalDeContasCriadas++;
         }
 
         //Criamos metodos sacar depositar transferir

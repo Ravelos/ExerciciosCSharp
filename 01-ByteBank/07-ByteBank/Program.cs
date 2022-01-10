@@ -12,6 +12,12 @@ namespace _07_ByteBank
         {
             ContaCorrente conta = new ContaCorrente(987, 987654234);
 
+            Console.WriteLine(ContaCorrente.TotalDeContasCriadas);
+
+            ContaCorrente Maria = new ContaCorrente(867, 94529);
+
+            Console.WriteLine(ContaCorrente.TotalDeContasCriadas);
+
                    
 
             Console.WriteLine(conta.Agencia);
