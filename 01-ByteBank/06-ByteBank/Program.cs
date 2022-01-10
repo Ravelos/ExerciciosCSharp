@@ -15,15 +15,17 @@ namespace _06_ByteBank
 
             Cliente cliente = new Cliente();
 
-            cliente.nome = "Oswaldo";
-            cliente.cpf = "789.654.789-32";
-            cliente.profissao = "Desenvolvedor";
+            // Foram modificados os campos nome, profissao e cpf
+
+            cliente.Nome = "Oswaldo";
+            cliente.CPF = "789.654.789-32";
+            cliente.Profissao = "Desenvolvedor";
 
 
             conta.Saldo= -10;
             conta.Titular = cliente;
 
-            Console.WriteLine(conta.Titular.nome);
+            Console.WriteLine(conta.Titular.Nome);
             Console.WriteLine(conta.Saldo);
             
 

@@ -9,12 +9,9 @@ namespace _06_ByteBank
 
         // Colocando o get e o set
         public Cliente Titular { get; set; }    
+        public int Agencia { get; set; }
+        public int Numero { get; set; }
 
-
-
-
-        public int agencia;
-        public int numero;
         private double _saldo = 100;
         // Atualizando o nome do campo saldo com underscore para mostrar que é um campo privado
 
